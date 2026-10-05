@@ -1,0 +1,76 @@
+:root {
+  --color-ink: #f6f5fb;
+  --color-muted: #a7a4b8;
+  --color-subtle: #787487;
+  --color-violet: #9b7cff;
+  --color-violet-bright: #bdadff;
+  --color-cyan: #67e8f9;
+  --color-surface: rgba(24, 21, 39, 0.72);
+  --color-surface-strong: #171326;
+  --color-line: rgba(255, 255, 255, 0.12);
+  --color-line-strong: rgba(189, 173, 255, 0.3);
+  --color-background: #08070d;
+  --font-display: "Space Grotesk", "Avenir Next", sans-serif;
+  --font-body: "DM Sans", "Avenir Next", sans-serif;
+  --content-width: 76rem;
+  --section-space: clamp(5rem, 11vw, 10rem);
+  color: var(--color-ink);
+  background: var(--color-background);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--color-background);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-background);
+}
+
+::selection {
+  color: var(--color-background);
+  background: var(--color-violet-bright);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 4px;
+}
+
+button,
+a,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

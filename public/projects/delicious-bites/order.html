@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delicious Bites - Order Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🍽️ Delicious Bites</h1>
+  <p>Order your favourite food online</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="order.html">Order</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+  <section>
+    <h2>Place Your Order</h2>
+    <form action="#" method="get">
+
+      <fieldset>
+        <legend>Customer Details</legend>
+
+        <div class="form-row">
+          <label for="cname">Full Name</label>
+          <input type="text" id="cname" name="customer_name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="cemail">Email Address</label>
+          <input type="email" id="cemail" name="customer_email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="cphone">Phone Number</label>
+          <input type="tel" id="cphone" name="customer_phone" placeholder="03XXXXXXXXX" pattern="[0-9]{11}" required>
+        </div>
+
+        <div class="form-row">
+          <label for="cpassword">Secure Order Code</label>
+          <input type="password" id="cpassword" name="order_code" placeholder="Create a code for this order">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Order Details</legend>
+
+        <div class="form-row">
+          <label>Delivery Method</label>
+          <div class="radio-group">
+            <label><input type="radio" name="delivery_method" value="home" checked> Home Delivery</label>
+            <label><input type="radio" name="delivery_method" value="pickup"> Pickup</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>Extra Toppings / Sides</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="toppings" value="cheese"> Extra Cheese</label>
+            <label><input type="checkbox" name="toppings" value="fries"> Fries</label>
+            <label><input type="checkbox" name="toppings" value="drink"> Cold Drink</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="qty">Quantity of Items</label>
+          <input type="number" id="qty" name="quantity" min="1" max="20" value="1" required>
+        </div>
+
+        <div class="form-row">
+          <label for="spice">Spice Level (1-10)</label>
+          <input type="range" id="spice" name="spice_level" min="1" max="10" value="5">
+        </div>
+
+        <div class="form-row">
+          <label for="ddate">Delivery Date</label>
+          <input type="date" id="ddate" name="delivery_date" required>
+        </div>
+
+        <div class="form-row">
+          <label for="dtime">Delivery Time</label>
+          <input type="time" id="dtime" name="delivery_time" required>
+        </div>
+
+        <div class="form-row">
+          <label for="theme">Favourite Theme Colour</label>
+          <input type="color" id="theme" name="theme_color" value="#7a1f1f">
+        </div>
+
+        <div class="form-row">
+          <label for="receipt">Upload Payment Receipt / ID</label>
+          <input type="file" id="receipt" name="payment_receipt" accept="image/*,.pdf">
+        </div>
+
+        <div class="form-row">
+          <label for="dish">Choose Dish</label>
+          <select id="dish" name="dish_choice" required>
+            <option value="">-- Select a dish --</option>
+            <option value="biryani">Chicken Biryani</option>
+            <option value="karahi">Beef Karahi</option>
+            <option value="burger">Zinger Burger</option>
+            <option value="salad">Fresh Garden Salad</option>
+            <option value="cake">Chocolate Lava Cake</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="instructions">Special Instructions</label>
+          <textarea id="instructions" name="special_instructions" rows="4" placeholder="Any special request..."></textarea>
+        </div>
+      </fieldset>
+
+      <button type="submit">Confirm Order</button>
+      <input type="reset" value="Clear Form">
+
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Delicious Bites Restaurant. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
